@@ -5,7 +5,8 @@ LABEL maintainer="Try Ajitiono <ballinst@gmail.com>"
 ARG MONGO_VERSION=3.4
 
 # Install NodeJS v8.x
-RUN curl -sL https://deb.nodesource.com/setup_8.x | -E bash - && \
+RUN apt-get -y install apt-transport-https curl && \
+	curl -sL https://deb.nodesource.com/setup_8.x | -E bash - && \
 	apt-get install -y nodejs build-essential
 
 # Install MongoDB
