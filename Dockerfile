@@ -7,7 +7,7 @@ ARG MONGO_VERSION=3.4
 # Install NodeJS v8.x
 RUN apt-get -qq update && \ 
 	apt-get -y install apt-transport-https curl && \
-	curl -sL https://deb.nodesource.com/setup_8.x | -E bash - && \
+	curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
 	apt-get install -y nodejs build-essential
 
 # Install MongoDB
