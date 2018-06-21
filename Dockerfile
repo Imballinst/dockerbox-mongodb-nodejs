@@ -8,7 +8,7 @@ ARG MONGO_VERSION=3.4
 RUN apt-get -qq update && \ 
 	apt-get -y install apt-transport-https curl && \
 	curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
-	apt-get install -y nodejs build-essential
+	apt-get install -y nodejs build-essential openssh-server
 
 # Install MongoDB
 RUN	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6 && \
